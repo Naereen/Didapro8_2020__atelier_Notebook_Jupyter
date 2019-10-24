@@ -6,6 +6,7 @@
 %
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage[scale=0.67]{geometry}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -17,9 +18,9 @@
 
 \begin{document}
 %
-\title{Poster proposal: using \Jupyter{} notebooks for teaching and practical sessions}%\thanks{Supported by ENS Rennes and CentraleSup{\'e}lec.}}
+\title{Proposition de poster : utiliser des notebooks \Jupyter{} pour l'enseignement et des travaux pratiques}%\thanks{Supported by ENS Rennes and CentraleSup{\'e}lec.}}
 %
-\titlerunning{Poster proposal: \Jupyter{} notebooks}
+\titlerunning{Proposition de poster : utiliser des notebooks \Jupyter}
 % % If the paper title is too long for the running head, you can set
 % % an abbreviated paper title here
 % %
@@ -38,42 +39,53 @@
 \begin{abstract}
     % The abstract should briefly summarize the contents of the paper in 150--250 words.
     % https://www.didapro.org/8/contributions-dates/
-    I propose a poster which will present the \Jupyter{} notebooks, and give a good overview of the \Jupyter{} ecosystem.
-    In a dense but precise A5 poster, I can explain how one can easily use \Jupyter{} notebooks with the Python programming language, as well as other languages.
-    Notebooks can be used for lecture material, to obtain one document that contains text, maths, figures, code snippets and the outputs of their execution.
-    \Jupyter{} Notebooks are also an excellent tool to use for practical sessions in studying computer science, but also any other science with numerical computations or data analysis (mathematics, physics and chemistry, engineering etc), as a template or a skeleton can be given to the students, and collected and rated after the practical session.
-\keywords{Jupyter \and Notebook \and Python \and Open-source tool \and Teaching programming \and Data science.}
+    % I propose a poster which will present the \Jupyter{} notebooks, and give a good overview of the \Jupyter{} ecosystem.
+    % In a dense but precise A5 poster, I can explain how one can easily use \Jupyter{} notebooks with the Python programming language, as well as other languages.
+    % Notebooks can be used for lecture material, to obtain one document that contains text, maths, figures, code snippets and the outputs of their execution.
+    % \Jupyter{} Notebooks are also an excellent tool to use for practical sessions in studying computer science, but also any other science with numerical computations or data analysis (mathematics, physics and chemistry, engineering etc), as a template or a skeleton can be given to the students, and collected and rated after the practical session.
+    Je propose un poster qui présentera les notebooks \Jupyter{}, et donne un bon aperçu de l'environnement \Jupyter{} dans son ensemble.
+    Dans un poster A5 dense mais précis, je peux expliquer comment on peut facilement écrire des notebooks interactifs \Jupyter{} pour le langage de programmation Python.
+    Les notebooks peuvent être utilisés pour du matériel de cours, pour obtenir un document qui contient du texte, des maths, des figures, des extraits de code et les résultats de leurs exécutions.
+    Les notebooks \Jupyter{} sont également un excellent outil pour les travaux pratiques d'informatique, mais aussi pour toute autre science avec des calculs numériques ou l'analyse de données (mathématiques, physique et chimie, ingénierie, etc), et comme modèle ou squelette pouvant être remis aux étudiants, et collectés et évalués après la session pratique.
+
+    \keywords{Jupyter \and Notebook \and Python \and Outil open-source \and Enseignement de la programmation \and Science des données.}
 \end{abstract}
 %
 %
 %
 
 % -------------------------
-\section{Outline of the poster content}
+% \section{Outline of the poster content}
+\section*{Aperçu du contenu du poster}
 
-The poster will present the following points.
+% The poster will present the following points.
+Le poster présentera les points suivants.
 
-\paragraph{Presentation of \Jupyter}
+% \paragraph{Presentation of \Jupyter}
+\paragraph{Présentation de \Jupyter}
+
 
 \begin{itemize}
-    \item What is a \Jupyter{} notebook: a what-you-see-is-what-you-get (WYSIWYG) integrated development environment (IDE) for (almost) any programming language. For instance, it can be used for interpreted dynamic languages such as Python \cite{python}, OCaml\footnote{With \url{https://github.com/akabe/ocaml-jupyter}, and other ``kernels'' for other languages.}, Julia or Bash, but also compiled languages such as C/C++ etc.
+    \item Qu'est-ce qu'un notebook \Jupyter{} : un environnement de développement intégré (IDE) ``WYSIWYG'' (What-you-see-is-what-you-get) pour (presque) tous les langages de programmation. Par exemple, il peut être utilisé pour des langages dynamiques interprétés, tels que Python \cite{python}, OCaml\footnote{Avec \url{github.com/akabe/ocaml-jupyter}, et d'autres ``noyaux'' pour d'autres langages.}, Julia ou Bash, mais aussi pour des langages compilés, tels que C/C++ etc.
 
-    \item What is the \Jupyter{} ecosystem: it started as ipython \cite{ipython} about 20 years ago, designed to be used only for the Python programming language, and nowadays it has evolved into a mature open-source ecosystem.
-    It is used by hundreds of thousands of scientists from all over the world, and among its recent successful uses, one can note the first ever picture of a black whole by Katie Bouman and collaborators\footnote{See for instance \url{https://www.nationalgeographic.com/science/2019/04/first-picture-black-hole-revealed-m87-event-horizon-telescope-astrophysics/} and \url{https://www.bbc.com/news/science-environment-47891902}.}, or by Nobel laureates such as Paul Romer\footnote{See \url{https://paulromer.net/jupyter-mathematica-and-the-future-of-the-research-paper/}}.
-    Jupyter notebooks are a free and open-source alternatives to proprietary IDE included in MATLAB, Wolfram's Mathematica and MapleSoft's Maple software.
+    \item Qu'est-ce que l'écosystème \Jupyter{} : il a commencé sous le nom \texttt{ipython} \cite{ipython} il y a environ 10 ans, conçu pour être utilisé uniquement pour le langage de programmation Python, et de nos jours il a évolué en un écosystème open-source mature.
+    Il est utilisé par des centaines de milliers de scientifiques du monde entier, et parmi ses récentes utilisations réussies, on peut noter la toute première image d'un trou noir par Katie Bouman et ses collaborateurs\footnote{Voir par exemple \url{www.nationalgeographic.com/science/2019/04/first-picture-black-hole-revealed}\\\url{-m87-event-horizon-telescope-astrophysics/} et \url{www.bbc.com/news/science-environment-47891902}.}, ou par des lauréats de prix Nobel, comme Paul Romer\footnote{Voir \url{paulromer.net/jupyter-mathematica-and-the-future-of-the-research-paper/}}.
+    Les notebooks \Jupyter{} sont une alternative gratuite et open-source à l'EDI propriétaire inclus dans les logiciels MATLAB, Wolfram's Mathematica et MapleSoft's Maple.
 
-    \item What problems solve \Jupyter{} notebooks? Why they are awesome, both easy to learn and use for beginners and powerful for expert users.
+    \item Quels problèmes résolvent les notebooks \Jupyter{} ? Pourquoi c'est un outil puissant, à la fois facile à apprendre et à utiliser pour les débutants et puissant pour les utilisateurs experts.
 \end{itemize}
 
-\paragraph{How to install \Jupyter}
-
-By following the online tutorial from \url{https://jupyter.org/install.html}, it is easy to install the entire \Jupyter{} ecosystem on any computer with Python and \texttt{pip} or \texttt{conda} installed.
 
 
-\paragraph{How to use \Jupyter{} to write simple documents}
+\paragraph{Comment installer \Jupyter{}}
 
-The poster will include a screenshot of the Graphical User Interface of \Jupyter{} notebooks.
-It will also include links to the official online tutorial and documentation, as pointers to learn by yourself.
+En suivant le tutoriel en ligne depuis \url{jupyter.org/install.html}, il est facile d'installer tout l'écosystème \Jupyter{} sur tout ordinateur avec Python et \texttt{pip} ou \texttt{conda} installés.
+
+
+\paragraph{Comment utiliser \Jupyter{} pour écrire des documents simples}
+
+Le poster comprendra une capture d'écran de l'interface utilisateur graphique des notebooks \Jupyter{}.
+Il comprendra également des liens vers le tutoriel et la documentation officiels en ligne, qui vous permettront d'apprendre par vous-même.
 
 
 % \paragraph{Presenting my own usage of \Jupyter{} notebooks}
@@ -108,17 +120,18 @@ It will also include links to the official online tutorial and documentation, as
 
 
 
-\paragraph{Pointers on how to become a \Jupyter{} expert}
+% \paragraph{Pointers on how to become a \Jupyter{} expert}
+\paragraph{Des conseils pour devenir un expert en \Jupyter}
 
-The poster will also contain links to master the \Jupyter{} ecosystem and use them for your own project.
+Le poster contiendra également des liens pour maîtriser l'écosystème \Jupyter{} et les utiliser pour votre propre projet.
 
 \begin{itemize}
-    \item How to use a GitHub/Bitbucket/GitLab repository to host \Jupyter{} notebooks, and display them online using the \url{https://nbviewer.jupyter.org/} website.
-    See \url{https://github.com/Naereen/ALGO1-Info1-2019/} and \url{https://github.com/Naereen/notebooks/}
-    \item Use Binder, Google Colab or other online free tools to add a link so that any user of your \Jupyter{} notebooks can start interactive environment directly from their web browser, to interact with the notebook.
-    \item Use \Jupyter{} extensions to extend the IDE, for instance to automatically add a table of contents. See \url{https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/}.
-    \item Study from the masters, for instance the famous Peter Norvig publishes very interesting notebooks on his project \url{https://github.com/norvig/pytudes} since 5 years.
-    \item Share your notebooks online, with your students and colleagues, and receive feedback from them!
+    \item Comment utiliser un dépôt GitHub/Bitbucket/GitLab pour héberger des notebooks \Jupyter{}, et les afficher en ligne en utilisant le site \url{nbviewer.jupyter.org/}.
+    Voir \url{github.com/Naereen/ALGO1-Info1-2019/} et \url{github.com/Naereen/notebooks/}
+    \item Utilisez Binder, Google Colab ou d'autres outils gratuits en ligne, pour ajouter un lien afin que tout utilisateur consultant vos notebooks \Jupyter{} puisse démarrer un environnement interactif, directement depuis son navigateur Web, pour interagir avec le notebook sans rien avoir à installer.
+    \item Utilisez les extensions \Jupyter{} pour améliorer l'EDI, par exemple pour ajouter automatiquement une table des matières. Voir \url{jupyter-contrib-nbextensions.readthedocs.io/en/latest/}.
+    \item Suivre les meilleurs exemples, par exemple le célèbre Peter Norvig publie des notebooks très intéressants sur son projet \url{github.com/norvig/pytudes}, depuis 5 ans.
+    \item Partagez vos notebooks en ligne, avec vos étudiants et collègues, et recevez leurs commentaires.
 \end{itemize}
 
 
