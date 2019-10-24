@@ -6,7 +6,7 @@
 %
 \usepackage{graphicx}
 \usepackage{url}
-\usepackage[scale=0.70]{geometry}
+\usepackage[scale=0.67]{geometry}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
@@ -16,9 +16,9 @@
 
 \begin{document}
 %
-\title{Poster proposal: using an online Turing Machine simulator for a theoretical class on complexity and calculability}%\thanks{Supported by ENS Rennes and CentraleSup{\'e}lec.}}
+\title{Proposition de poster : un simulateur de Machines de Turing en ligne, utilisé pour des cours d'informatique sur la calculabilité et la complexité}%\thanks{Supported by ENS Rennes and CentraleSup{\'e}lec.}}
 %
-\titlerunning{Poster proposal: an online Turing Machine simulator}
+\titlerunning{Proposition de poster : utilisation d'un simulateur de Machines de Turing}
 % % If the paper title is too long for the running head, you can set
 % % an abbreviated paper title here
 % %
@@ -30,81 +30,82 @@
 % %
 % \institute{{\'E}cole Normale Sup{\'e}rieure de Rennes, Bruz, France\\
 % \email{lilian.besson{@}ens-rennes.fr}\\
-% \url{http://www.ens-rennes.fr/}}
+% \url{www.ens-rennes.fr/}}
 %
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
     % The abstract should briefly summarize the contents of the paper in 150--250 words.
     % https://www.didapro.org/8/contributions-dates/
-    I propose a poster which will present an online Turing Machine simulator (\url{https://naereen.github.io/jsTuring_fr/turing.html}),
-    which has been used successfully for a course introducing calculability and complexity to engineering students in France,
-    as well as for a master's degree course for students preparing the computer science major option at the ``agr{\'e}gation'' national exam in mathematics.
-    The poster detail the user interface of the Turing Machine simulator, and explain these two successful use cases.
-\keywords{Turing Machine \and Online tool for teaching theoretical computer science \and Javascript \and Open-source tool.}
+    Je propose un poster, qui présentera un simulateur de Machines de Turing, disponible en ligne (sur la page \url{naereen.github.io/jsTuring_fr/turing.html}),
+    qui a été utilisé avec succès pour un cours introduisant la calculabilité et la complexité dans une école d'ingénieurs en France,
+    ainsi qu'un cours de Master pour des étudiants préparant l'option majeure en informatique à l'examen national de mathématiques de l'agr{\'e}gation.
+    L'affiche détaillera l'interface utilisateur du simulateur de la machine de Turing et explique ces deux utilisations réussies.
+
+    \keywords{Machines de Turing \and Outil en ligne pour enseigner l'informatique théorique \and Javascript \and Outil open-source.}
 \end{abstract}
 %
 %
 %
 
 % -------------------------
-\section{Outline of the poster content}
+\section*{Aperçu du contenu de l'affiche}
 
-The poster will present the following points.
+L'affiche présentera les points suivants.
 
-\paragraph{Presentation of Turing Machine}
+\subsection*{Présentation de la machine de Turing}
 
-I quickly introduce the notations of the Turing Machine model, using modern notations \cite{turingmachine}, and not the historical notations from Turing's paper.
+J'introduis rapidement les notations du modèle de machines de Turing, en utilisant les notations modernes \cite{turingmachine}, et non les notations historiques de Turing (1936).
 %
-A (one-tape) Turing machine can be formally defined as a 7-tuple $M=\langle Q,\Gamma ,b,\Sigma ,\delta ,q_{0},F\rangle$ where
+Une machine de Turing (à bande unique) peut être formellement définie comme un 7-uplet $M=\langle Q,\Gamma \, b,\Sigma \,, \delta , q_{0},F\rangle$, où
 
 \begin{small}
 \begin{itemize}
     \item
-    $Q$ is a finite, non-empty set of states;
+    $Q$ est un ensemble fini et non vide d'états ;
     \item
-    $\Gamma$ is a finite, non-empty set of tape alphabet symbols;
+    $\Gamma$ est un ensemble fini et non vide de symboles alphabétiques ;
     \item
-    $b\in \Gamma$ is the blank symbol (the only symbol allowed to occur on the tape infinitely often at any step during the computation);
+    $b\in \in \Gamma$ est le symbole vide (le seul symbole autorisé à apparaître sur la bande infiniment souvent à n'importe quelle étape du calcul) ;
     \item
-    $\Sigma \subseteq \Gamma \setminus \{b\}$ is the set of input symbols, that is, the set of symbols allowed to appear in the initial tape contents;
+    $\Sigma \subseteq \Gamma \Gamma \setminus \{b\}$ est l'ensemble des symboles d'entrée, c'est-à-dire l'ensemble des symboles autorisés à apparaître dans le contenu initial de la bande ;
     \item
-    $q_{0}\in Q$ is the initial state;
+    $q_{0}\in Q$ est l'état initial ;
     \item
-    $F\subseteq Q$ is the set of final states or accepting states. The initial tape contents is said to be accepted by $M$ if it eventually halts in a state from $F$.
+    $F\subseteq Q$ est l'ensemble des états finaux ou des états acceptants. Le contenu initial de la bande est dit accepté par $M$ s'il s'arrête finalement dans un état à partir de $F$.
     \item
-    $\delta :(Q\setminus F)\times \Gamma \not \to Q\times \Gamma \times \{L,R\}$ is a partial function called the transition function, where L is left shift, R is right shift. If $\delta$ is not defined on the current state and the current tape symbol, then the machine halts.
+    $\delta :(Q\setminus F)\times \Gamma \not \not \time \to Q\times \Gamma \times \L,R\}$ est une fonction partielle appelée fonction de transition, où L est décalage gauche, R est décalage droit. Si $\delta$ n'est pas défini sur l'état courant et le symbole de bande courant, alors la machine s'arrête.
 \end{itemize}
 \end{small}
 
 
-\paragraph{Presentation of the online Turing Machine simulator}
+\subsection*{Présentation du simulateur de machines de Turing en ligne}
 
-The presented Turing Machine simulator \cite{morphett_simulators,naereen_simulators},
-can be found online at
-\url{http://morphett.info/turing/} in English,
-and \url{https://naereen.github.io/jsTuring_fr/turing.html} in French.
+Le simulateur de la machine de Turing présenté \cite{morphett_simulators,naereen_simulators},
+peut être consulté en ligne à l'adresse suivante
+\url{morphett.info/turing/} en anglais,
+et \url{naereen.github.io/jsTuring_fr/} en français.
 %
-By including two screenshots of the user interface, we present the different components of a Turing Machine (tape, state, input word, transition table etc).
-We also present the user interface of the simulator, which allows to save a machine described by its transition table $\delta$ to an online file (using GitHub's anonym gists, \url{https://gist.github.com/}), and to load machines already written.
+En incluant deux captures d'écran du simulateur, nous présentons les différents composants d'une machine de Turing (bande, état, mot d'entrée, table de transition, etc), voir Figure~\ref{fig:screenshots}.
+Nous présentons également l'interface utilisateur, qui permet d'enregistrer une machine décrite par sa table de transition $\delta$ dans un fichier en ligne (en utilisant les gists anonymes de GitHub, \url{gist.github.com/}), et de charger des machines déjà écrites.
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=9cm]{interactive_Turing_Machine_simulator_1.png}
-    \includegraphics[width=9cm]{interactive_Turing_Machine_simulator_2.png}
-    \caption{Screenshots of the user interface of the online Turing Machine simulator \url{https://naereen.github.io/jsTuring_fr/turing.html}.}
-    % \label{}
+    \includegraphics[width=0.49\textwidth]{interactive_Turing_Machine_simulator_1.png}
+    \includegraphics[width=0.49\textwidth]{interactive_Turing_Machine_simulator_2.png}
+    \caption{Captures d'écran de l'interface utilisateur du simulateur en ligne de la machine de Turing \url{naereen.github.io/jsTuring_fr/turing.html}.}
+    \label{fig:screenshots}
 \end{figure}
 
 
-\paragraph{Use cases for teaching}
+\subsection*{Cas d'utilisation pour l'enseignement}
 
-By allowing to load pre-written examples of Turing Machine, the simulator was successfully used in practical sessions for two different classes since 2017.
+En permettant de charger des exemples de machines de Turing  pré-écrits, le simulateur a été utilisé avec succès dans des travaux pratiques pour deux classes différentes depuis 2017.
 
 
-\paragraph{A curiosity: universal Turing Machine}
+\paragraph{Une curiosité}
 
-The last part of the poster will detail the interesting case of the universal Turing Machine, to tackle the most curious attendees of the conference.
+La dernière partie du poster détaillera le cas intéressant de la \emph{machine de Turing universelle}, pour attiser la curiosité des participants à la conférence.
 
 
 % ---- Bibliography ----
@@ -118,19 +119,19 @@ The last part of the poster will detail the interesting case of the universal Tu
 \begin{thebibliography}{8}
     \bibitem{turingmachine}
     Wikipedia contributors.
-    \textbf{Turing Machine}, consulted in October 2019.
-    \url{https://en.wikipedia.org/wiki/Turing_machine}.
+    \textbf{Turing Machine}, consulté en octobre 2019.
+    \url{en.wikipedia.org/wiki/Turing_machine}.
 
     \bibitem{morphett_simulators}
     \textbf{Turing machine simulator},
-    Anthony Morphett.
-    Source code at \url{https://github.com/awmorp/jsturing},
-    web interface at \url{http://morphett.info/turing/}.
+    écrit par Anthony Morphett.
+    Code source sur \url{github.com/awmorp/jsturing},
+    interface web à \url{morphett.info/turing/}.
 
     \bibitem{naereen_simulators}
     \textbf{Simulateur de Machines de Turing},
-    Lilian Besson.
-    Source code at \url{https://github.com/Naereen/jsTuring_fr},
-    web interface at \url{https://naereen.github.io/jsTuring_fr/turing.html}.
+    traduit par Lilian Besson.
+    Code source sur \url{github.com/Naereen/jsTuring_fr},
+    interface web à \url{naereen.github.io/jsTuring_fr/turing.html}.
 \end{thebibliography}
 \end{document}

@@ -14,7 +14,7 @@
 ---
 
 ## :scroll: License ? [![GitHub license](https://img.shields.io/github/license/Naereen/Didapro8_2020__atelier_Notebook_Jupyter.svg)](https://github.com/Naereen/Didapro8_2020__atelier_Notebook_Jupyter/blob/master/LICENSE)
-[CCA 3.0 licensed](https://creativecommons.org/licenses/by/3.0/) (file [LICENSE](LICENSE)).
+[MIT Licensed](https://lbesson.mit-license.org/) (file [LICENSE](LICENSE)).
 © [Lilian Besson](https://GitHub.com/Naereen), 2019-2020.
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/Didapro8_2020__atelier_Notebook_Jupyter/graphs/commit-activity)
