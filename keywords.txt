@@ -1,6 +1,7 @@
 Jupyter
 Notebook
 Python
-Open-source tool
-Teaching programming
-Data science
+Outil open-source
+Enseignement de la programmation
+Enseignement de l'informatique
+Science des données
